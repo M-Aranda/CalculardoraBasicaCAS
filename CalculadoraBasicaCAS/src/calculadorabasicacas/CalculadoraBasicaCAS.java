@@ -12,7 +12,15 @@ import java.util.Scanner;
  * @author Chelo
  */
 public class CalculadoraBasicaCAS {
-
+    
+    private int Suma (int x, int y) {
+        return x + y;
+    };
+    
+    private int Mult (int x, int y) {
+        return x * y;
+    };
+    
     /**
      * @param args the command line arguments
      */
