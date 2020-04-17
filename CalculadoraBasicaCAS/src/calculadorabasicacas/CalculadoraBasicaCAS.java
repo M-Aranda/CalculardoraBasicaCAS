@@ -39,10 +39,10 @@ public class CalculadoraBasicaCAS {
         return n1 - n2;
     }
 
-    public static int dividir(int n1, int n2) {
-        float resultado = n1 / n2;
-        int resultadoAInt = Math.round(resultado);
-        return resultadoAInt;
+    public static double dividir(int n1, int n2) {
+        double n1f = (float) n1;
+        double n2f = (float) n2;
+        return n1f / n2f;
     }
 
     public static void mostrarMenu() {
@@ -55,6 +55,7 @@ public class CalculadoraBasicaCAS {
             System.out.println("3. Multiplicar");
             System.out.println("4. Dividir");
 
+            System.out.print("Opción: ");
             Scanner s = new Scanner(System.in);
 
             /*
@@ -113,7 +114,13 @@ public class CalculadoraBasicaCAS {
                 int n1 = s.nextInt();
                 System.out.print("Digite segundo número:");
                 int n2 = s.nextInt();
-                int resultado = dividir(n1, n2);
+
+                if (n1 == 0 || n2 == 0) {
+                    System.out.println("No puede dividir por cero.");
+                    mostrarMenu();
+                };
+
+                double resultado = dividir(n1, n2);
                 System.out.println("");
                 System.out.println("El resultado es:" + resultado);
                 System.out.println("");
