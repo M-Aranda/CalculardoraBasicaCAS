@@ -124,7 +124,6 @@ public class CalculadoraBasicaCAS {
             System.out.println("Debe ingresar un número");
             mostrarMenu();
         }
-
     }
 
 }
