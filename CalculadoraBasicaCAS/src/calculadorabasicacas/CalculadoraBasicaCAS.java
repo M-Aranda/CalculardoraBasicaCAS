@@ -12,15 +12,7 @@ import java.util.Scanner;
  * @author Chelo
  */
 public class CalculadoraBasicaCAS {
-    
-    private int Suma (int x, int y) {
-        return x + y;
-    };
-    
-    private int Mult (int x, int y) {
-        return x * y;
-    };
-    
+
     /**
      * @param args the command line arguments
      */
@@ -30,6 +22,19 @@ public class CalculadoraBasicaCAS {
 
     }
 
+    public static int suma(int x, int y) {
+        return x + y;
+    }
+
+    ;
+    
+    public static int mult(int x, int y) {
+        return x * y;
+    }
+
+    ;
+
+ 
     public static int restar(int n1, int n2) {
         return n1 - n2;
     }
@@ -68,6 +73,15 @@ public class CalculadoraBasicaCAS {
              }*/
             if (opcionElegida == 1) {
                 //Sumar
+                System.out.print("Digite primer número:");
+                int n1 = s.nextInt();
+                System.out.print("Digite segundo número:");
+                int n2 = s.nextInt();
+                int resultado = suma(n1, n2);
+                System.out.println("");
+                System.out.println("El resultado es:" + resultado);
+                System.out.println("");
+                mostrarMenu();
 
             } else if (opcionElegida == 2) {
                 //Restar
@@ -83,6 +97,16 @@ public class CalculadoraBasicaCAS {
 
             } else if (opcionElegida == 3) {
                 //Multiplicar
+                System.out.print("Digite primer número:");
+                int n1 = s.nextInt();
+                System.out.print("Digite segundo número:");
+                int n2 = s.nextInt();
+                int resultado = mult(n1, n2);
+                System.out.println("");
+                System.out.println("El resultado es:" + resultado);
+                System.out.println("");
+                mostrarMenu();
+
             } else if (opcionElegida == 4) {
                 //Dividir
                 System.out.print("Digite primer número:");
